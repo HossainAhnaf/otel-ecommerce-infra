@@ -12,10 +12,9 @@ module "aks_cluster" {
   cluster_name        = local.aks_cluster_name
   sku_tier            = var.sku_tier
   node_pool = {
-    name         = var.node_pool.name
-    node_count   = var.node_pool.node_count
-    vm_size      = var.node_pool.vm_size
-    max_pods     = var.node_pool.max_pods
-    os_disk_type = var.node_pool.os_disk_type
+    name       = var.node_pool.name
+    node_count = var.node_pool.node_count
+    vm_size    = var.node_pool.vm_size
+    max_pods   = var.node_pool.max_pods
   }
 }

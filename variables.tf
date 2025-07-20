@@ -10,11 +10,10 @@ variable "sku_tier" {
 
 variable "node_pool" {
   type = object({
-    name         = string
-    node_count   = number
-    vm_size      = string
-    max_pods     = number
-    os_disk_type = string
+    name       = string
+    node_count = number
+    vm_size    = string
+    max_pods   = number
   })
 
   description = "Node pool"
