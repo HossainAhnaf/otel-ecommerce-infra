@@ -17,4 +17,5 @@ module "aks_cluster" {
     vm_size    = var.node_pool.vm_size
     max_pods   = var.node_pool.max_pods
   }
+  depends_on = [azurerm_resource_group.main]
 }
