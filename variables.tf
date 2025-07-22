@@ -6,6 +6,7 @@ variable "location" {
 variable "aks_agent_count" {
   type        = number
   description = "value for agent count"
+  default     = null
 }
 
 variable "aks_agent_size" {
@@ -13,14 +14,22 @@ variable "aks_agent_size" {
   description = "value for agent size"
 }
 
-variable "aks_agent_pool_name" {
-  type        = string
-  description = "value for agent pool name"
-}
 
 variable "aks_agent_max_pods" {
   type        = number
   description = "value for agent max pods"
+}
+
+variable "aks_agent_min_count" {
+  type        = number
+  description = "value for agent min count"
+  default     = null
+}
+
+variable "aks_agent_max_count" {
+  type        = number
+  description = "value for agent max count"
+  default     = null
 }
 
 variable "aks_sku_tier" {
@@ -33,7 +42,7 @@ variable "aks_azure_policy_enabled" {
   description = "value for azure policy"
 }
 
-variable "aks_auto_scaler_profile_enabled" {
+variable "aks_enable_auto_scaling" {
   type        = bool
-  description = "value for auto scaler profile"
+  description = "value for enable auto scaling"
 }
