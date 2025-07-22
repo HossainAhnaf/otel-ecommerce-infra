@@ -1,5 +1,4 @@
 locals {
-  resource_group   = "${var.prefix}-rg"
-  location         = "East US"
-  aks_cluster_name = "${var.prefix}-aks"
+  project_name  = "otel-ecommerce"
+  naming_suffix = [local.project_name, terraform.workspace, var.location]
 }

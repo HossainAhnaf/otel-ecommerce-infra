@@ -1,5 +1,4 @@
-
 output "cluster_credentials_download_command" {
-  value       = module.aks_cluster.cluster_credentials_download_command
-  description = "Cluster credentials download command"
+  value = "az aks get-credentials --resource-group ${azurerm_resource_group.main.name} --name ${module.aks.aks_name} --overwrite-existing"
+
 }

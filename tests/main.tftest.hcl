@@ -8,7 +8,7 @@ run "demo_plan" {
   command = plan
 
   assert {
-    condition     = local.location == "East US"
-    error_message = "location should be East US"
+    condition     = local.project_name == "otel-ecommerce"
+    error_message = "project name should be otel-ecommerce"
   }
 }
